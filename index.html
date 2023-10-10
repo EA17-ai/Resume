@@ -8,6 +8,15 @@
     <noscript>
         <link href="assets/css/noscript.css" rel="stylesheet"/>
     </noscript>
+    <style>
+    .content {
+    display: none;
+}
+
+#masterthesis {
+    display: block;
+}
+    </style>
 </head>
 <body class="is-preload">
 
@@ -18,7 +27,7 @@
             <ul>
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#experience">Professional Experience</a></li>
-                <li><a href="#projects">Academic Projects</a></li>
+                <li><a href="#academicprojects">Academic Projects</a></li>
 
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact Information</a></li>
@@ -129,18 +138,21 @@
                 </div>
             </div>
 </section>
-<section class="inner">
-    <div class="content">
-        <p>
-
-        </p>
+<section class="wrapper style1 fullscreen fade-up" id="academicprojects">
+<div class="dropdown">
+        <select id="dropdownMenu" onchange="navigateToSelectedSection()">
+            <option value="masterthesis">Master Thesis</option>
+            <option value="mlanddl">Machine Learning and Deep Learning Projects</option>
+            <option value="other">Other Projects</option>
+        </select>
     </div>
-</section>
-<section class="wrapper style1 fullscreen fade-up" id="projects">
 
-    <div class="inner">
+    <div id="masterthesis" class="content">
 
+
+        <br>
         <h3>Master Thesis</h3>
+       <br>
         <p>
         <ul>
             <li>Executed various phases of the MLOps Lifecycle, including data collection, augmentation, and
@@ -158,6 +170,10 @@
             </li>
         </ul>
         </p>
+
+        </div>
+    <div id="mlanddl" class="content">
+        <br>
         <h3>Lung Disease Image Classification using Machine Learning and Deep Learning Techniques
         </h3>
         <p>
@@ -168,6 +184,49 @@
                 diseases
                 and conditions, after conducting data preprocessing and feature extraction</li></ul>
         </p>
+    <br>
+        <h3>
+            StreamLit App for Object Detection with YOLOv8
+        </h3>
+        <p>
+        <ul>
+            <li>Developed a Streamlit app for object detection using YOLOv8, a state-of-the-art deep
+learning algorithm. Leveraged Python programming skills to build a user-friendly
+interface that allows users to upload images and view real-time object detection
+results. Contributed to the development of computer vision technology and gained
+hands-on experience in deep learning model deployment.
+</li></ul>
+        </p>
+
+    </div>
+    <div id="other" class="content">
+        <br>
+        <h3>
+            Masters Project Arbeit - Image Reconstruction using Light Data,IMEK
+TUHH, Hamburg
+        </h3>
+        <p>
+        <ul>
+            <li>
+                Developed algorithms in Matlab to optimize execution time and improve image quality.
+Images reconstructed for different inputs (Checker Board Pattern, Logos, and
+Basketball Images) with MATLAB
+            </li></ul>
+        </p>
+        <br>
+        <h3>
+            Application development using Java for a LEGO robot to solve a
+complex maze
+        </h3>
+        <p>
+        <ul>
+            <li>
+                This project allowed a LEGO robot to solve a complex Maze autonomously. Color sensing, distance measurement and motor control algorithms were developed in
+Eclipse using Java
+            </li></ul>
+        </p>
+
+
     </div>
 </section>
 
@@ -205,11 +264,12 @@
             <span class="icon solid major fa-link"></span>
             <h3>Operating Systems</h3>
             <p>Linux,Windows</p>
+            <br>
         </section>
         <section>
             <span class="icon major fa-gem"></span>
-            <h3></h3>
-            <p></p>
+            <h3>DevOps Tools</h3>
+            <p>Docker</p>
         </section>
     </div>
 
@@ -246,17 +306,6 @@
 </section>
 
 </div>
-
-<!-- Footer -->
-<footer class="wrapper style1-alt" id="footer">
-    <div class="inner">
-        <ul class="menu">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
-    </div>
-</footer>
-
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -265,6 +314,25 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+function navigateToSelectedSection() {
+    var dropdown = document.getElementById("dropdownMenu");
+    var selectedSectionId = dropdown.value;
 
+    // Hide all content sections
+    var contentSections = document.querySelectorAll(".content");
+    contentSections.forEach(function(section) {
+        section.style.display = "none";
+    });
+
+    // Show only the selected content section
+    var selectedSection = document.getElementById(selectedSectionId);
+    if (selectedSection) {
+        selectedSection.style.display = "block";
+    }
+}
+
+
+</script>
 </body>
 </html>
