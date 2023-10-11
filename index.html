@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Portfolio</title>
     <meta charset="utf-8"/>
@@ -9,6 +9,13 @@
         <link href="assets/css/noscript.css" rel="stylesheet"/>
     </noscript>
     <style>
+
+    #introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
     .content {
     display: none;
 }
@@ -16,7 +23,7 @@
     #masterthesis {
     display: block;
 }
-    
+
     </style>
 </head>
 <body class="is-preload">
@@ -26,7 +33,7 @@
     <div class="inner">
         <nav>
             <ul>
-                <li><a href="#profile">Profile</a></li>
+                <li><a href="#intro">Profile</a></li>
                 <li><a href="#experience">Professional Experience</a></li>
                 <li><a href="#academicprojects">Academic Projects</a></li>
 
@@ -41,41 +48,37 @@
 <div id="wrapper">
 
     <!-- Intro -->
-    <section class="wrapper style1 fullscreen " id="intro">
-        <div class="inner">
-            <section>
-                <div class="row">
-                    <div class="col-8">
-                        <h1>ABHINAV ELURI</h1>
-                        <h3>Machine Learning Engineer | Artificial Intelligence Engineer | Python Developer</h3>
-                        <p>As a Python developer with a keen interest in Machine Learning, I'm passionate about using
-                            cutting-edge
-                            technologies to solve complex problems. With experience in developing websites using Flask
-                            and FastAPI,
-                            I'm well-versed in building scalable and efficient backends for web applications.
-                            Additionally, my
-                            knowledge of Machine Learning algorithms and frameworks, such as TensorFlow and
-                            Scikit-learn, enables me
-                            to create intelligent and predictive systems. I'm excited about the opportunity to leverage
-                            my skills in
-                            a full-time position as a Python backend engineer or Machine Learning engineer. Whether it's
-                            optimizing
-                            backend processes for web applications or developing Machine Learning models to improve
-                            business
-                            operations, I'm ready to contribute to a team that values innovation and growth.</p>
+    <section class="wrapper style1 fullscreen" id="intro" >
+  <div class="container py-50 h-200 " id="introduction" >
+    <div class="row d-flex  align-items-center h-200">
+      <div class="col col-lg-8 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem; " >
+          <div class="row g-0" >
+            <div class="col-md-4 gradient-custom align-center text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;" >
+              <img src="images/picture.png"
+                alt="Avatar" class="img-fluid my-5" style="width:250px;" />
+              <h2>ABHINAV ELURI</h2>
+            <!--  <i class="far fa-edit mb-5"></i> -->
+            </div>
+            <div class="col-md-10" >
+              <div class="card-body p-8">
+              <h5>Python Developer | ML Engineer</h5>
 
-                    </div>
-                    <div class="col-4">
-                        <img alt="prof pic" class="fa-solid fa-circle" height="auto" src="images/picture.png"
-                             width="100%">
 
-                    </div>
-                </div>
-            </section>
-            <br/>
-
+                <hr class="mt-0 mb-4">
+                  <h5><i>
+                      As a Python developer with a keen interest in Machine Learning, I'm passionate about using cutting-edge technologies to solve complex problems. With experience in developing websites using Flask and FastAPI, I'm well-versed in building scalable and efficient backends for web applications. Additionally, my knowledge of Machine Learning algorithms and frameworks, such as TensorFlow and Scikit-learn, enables me to create intelligent and predictive systems. I'm excited about the opportunity to leverage my skills in a full-time position as a Python backend engineer or Machine Learning engineer. Whether it's optimizing backend processes
+                      for web applications or developing Machine Learning models to improve business operations,
+                      I'm ready to contribute to a team that values innovation and growth.</i>
+                  </h5>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- One -->
     <section class="wrapper style2 fade-up" id="experience">
@@ -107,7 +110,7 @@
             <div class="row justify-content-start">
                 <div class="col-2">
                     <strong> Workstudent</strong><br>
-                    Fraunhofer Center for Maritime Logistics<br>
+                    Fraunhofer CML<br>
                     Hamburg, Germany<br>
                     2021/09 – 2022/03
 
@@ -256,7 +259,7 @@
     </section>
 
     <!-- Two -->
-    <section class="wrapper style3 fade-up" id="skills">
+    <section class="wrapper style3 fade-up fullscreen" id="skills">
         <br>
         <div align="center">
             <h2>SKILLS</h2>
